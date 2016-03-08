@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="search-box text-center">
+        <div class="col-sm-3 form-group">
+            <span class="h1 text-center">商品订购</span>
+        </div>
+        <div class="col-sm-6 search">
+            <input type="text" class="form-control input-lg" value="{{search}}" placeholder="查找商品">
+        </div>
+        <div class="col-sm-3 form-group">
+            <div class="top text-center col-sm-12">
+                <a href="#"><span class="glyphicon glyphicon-check" aria-hidden="true"></span></a>
+            </div>
+        </div>
+    </div>
+    <div class="content-box text-center">
+        <div class="product pull-left" ng-repeat="i in [1,2,3,4,5,6,7,8]">
+            <div class="left pull-left text-center">
+                <img src="img/chart.jpg" height="120px" width="120px">
+                <span>￥2.0/瓶</span>
+            </div>
+            <div class="right pull-rignt text-center">
+                <span>农夫山泉</span>
+            </div>
+            <button type="button" class="btn btn-sm btn-info">订购</button>
+        </div>
+    </div>
+</div>
+<hr>
+<div class="navi-box text-center">
+    <a href="#">
+        <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
+    </a>
+    <a href="#">
+        <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+    </a>
+</div>
