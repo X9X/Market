@@ -1,0 +1,38 @@
+<div class="col-sm-8 col-sm-offset-2">
+    <div class="panel panel-primary text-center">
+        <div class="panel-heading">
+            <div class="panel-title">
+                订单详情
+            </div>
+        </div>
+        <div class="panel-body">
+            <table class="table table-stripe table-bordered text-left">
+                <thead>
+                    <th>商品</th>
+                    <th>数量</th>
+                    <th>规格</th>
+                    <th>单价</th>
+                    <th>金额</th>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="item in orderDetail">
+                        <td>{{item.goods.name}}</td>
+                        <td>{{item.quantity}}</td>
+                        <td>{{item.goods.unit}}</td>
+                        <td>{{item.goods.price}}</td>
+                        <td>{{item.amount}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="from-group">
+                <div class="col-sm-2 text-left">
+                    <span>共 {{totalQuantity}} 件，总计 {{totalAmount}} 元</span>
+                </div>
+                <div class="col-sm-1 col-sm-offset-9 text-center">
+                    <input class="btn btn-primary" type="button" value="再次购买" ng-click="rePurchase()">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

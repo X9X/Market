@@ -1,0 +1,54 @@
+<div class="col-sm-8 col-sm-offset-2">
+    <div class="panel panel-primary text-center">
+        <div class="panel-heading">
+            <div class="panel-title">
+                购物车
+            </div>
+        </div>
+        <div class="panel-body">
+            <table class="table table-stripe table-bordered text-left" width="100%">
+                <thead>
+                    <th>商品</th>
+                    <th>数量</th>
+                    <th>规格</th>
+                    <th>单价</th>
+                    <th>金额</th>
+                    <th>操作</th>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="item in cartGoods">
+                        <td>{{item.goods.name}}</td>
+                        <td width="15%">
+                            <div class="input-group">
+                                <a class="input-group-addon" href="" ng-click="updateQuantity('minus',$index)" ng-show="true">
+                                    <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+                                </a>
+                                <input type="text" class="form-control" id="amount" ng-model="cartGoods[$index].quantity" ng-pattern="pattern" ng-change="setQuantity(item.id,cartGoods[$index].quantity)">
+                                <a class="input-group-addon" href="" ng-click="updateQuantity('plus',$index)">
+                                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                                </a>
+                            </div>
+                        </td>
+                        <td>{{item.goods.unit}}</td>
+                        <td>{{item.goods.price}}</td>
+                        <td>{{item.amount}}</td>
+                        <td>
+                            <button class="btn btn-sm btn-warning" ng-click="deleteStuff(item.id,$index)">删除</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="from-group">
+                <div class="col-sm-2 text-left">
+                    <span>共{{cartGoods.length}}件，总计{{totalPrice}}元</span>
+                </div>
+                <div class="col-sm-1 col-sm-offset-8 text-center">
+                    <input class="btn btn-danger" type="button" value="全部删除" ng-click="deleteAllStuff()" ng-disabled="!cartGoods.length">
+                </div>
+                <div class="col-sm-1 text-center">
+                    <input class="btn btn-primary" type="button" id="shopping_cart_submit" value="提交" ng-click="submitCart()" ng-disabled="!cartGoods.length">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

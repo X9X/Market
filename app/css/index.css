@@ -1,30 +1,42 @@
+body{
+    font-family:'微软雅黑';
+}
 .container {
     width: 100%;
     margin: 0px;
     padding: 0px;
 }
 
+.nav li:hover{
+    background-color:#5bc0de;
+    border-radius:5px;
+}
 .search-box {
     width: 100%;
-    height: 200px;
-    background-image: url('../img/shop.jpg');
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
-    background-size: cover;
+}
+.form-control {
+    vertical-align:middle;
 }
 
-.search-box .form-group {
-    line-height: 200px;
-}
-.search-box .search {
-    margin-top:66px;
-}
-
-a {
+.pagination{
     font-size: 30px;
     font-weight: bold;
 }
-
+#goods-chart{
+    font-size: 40px;
+    font-weight: bold;
+}
+#goods-chart:hover,#goods-chart:visited,#goods-chart:active,#goods-chart:focus{
+    font-size: 50px;
+    font-weight: bold;
+}
+a:hover,a:visited,a:active,a:focus{
+    text-decoration:none;
+}
+.pagination:hover,.pagination:visited,.pagination:active,.pagination:focus{
+    font-size: 40px;
+    font-weight: bold;
+}
 .h1 {
     color: #CCC;
 }
@@ -37,25 +49,47 @@ a {
 .content-box .product {
     margin: 5px;
     padding: 5px;
-    width: 220px;
-    height: 150px;
+    width: 262px;
+    height: 180px;
     border: 1px solid #ccc;
 }
 
 .content-box .product .left {
     padding: 2px;
-    width: 132px;
+    width: 130px;
 }
-
+.left img{
+    margin-bottom:5px;
+}
 .content-box .product .right {
     padding: 2px;
     display: inline-block;
-    width: 70px;
-    height: 110px;
+    width: 110px;
+    height: 120px;
 }
-
+.input-group-addon{
+    font-size: 11px;
+}
 .navi-box {
     height: 30px;
-    width: 10%;
+    width: 100%;
     margin: 10px auto;
+}
+.navi-box a{
+    display:inline-block;
+    margin:5px 10px;
+}
+.navi-box .pagination{
+    color:#333;
+}
+.navi-box .current{
+    color:#428BCA;
+    font-size:40px;
+}
+.price {
+    font-size: 13px;
+    font-weight: bold;
+}
+.ng-invalid {
+    color:red;
 }
